@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 AI-Powered Content Creator
+An AI-powered tool that refines text, generates post templates for various platforms, and allows users to download content as an image. Built with Next.js, Tailwind CSS, and Google Gemini AI API.
 
-## Getting Started
+✨ Features
+📜 AI Refinement: Enhances text using Google Gemini AI.
 
-First, run the development server:
+📝 Generate Post: Creates AI-generated content for social media and blogs.
 
-```bash
+🎨 Platform-Specific Templates: Formats content for Instagram, LinkedIn, Twitter, Blogs, etc.
+
+🖼️ Download as Image: Converts AI-generated content into an image.
+
+🚀 Fast & Responsive: Optimized with Next.js and Tailwind CSS.
+
+📸 Demo
+🔗 Live Demo https://ai-content-refinement-tool-j75bmv0z9-yousraashfaqs-projects.vercel.app/
+
+🛠️ Tech Stack
+Framework: Next.js
+
+Styling: Tailwind CSS, ShadCN
+
+AI API: Google Gemini AI
+
+🏗️ Setup & Installation
+
+1️⃣ Clone the repository
+git clone https://github.com/YousraAshfaq/AI-Content_Refinement-Tool-DK.git
+cd AI-Content-Refinement-Tool-DK
+2️⃣ Install dependencies
+npm install
+3️⃣ Set up environment variables
+Create a .env.local file in the root directory and add:
+GEMINI_API_KEY=your-api-key
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+4️⃣ Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔗 API Endpoints
+🔹 /api/refine
+Method: POST
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Body: { "content": "text", "contentType": "General" }
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Response: { "refinedText": "AI-enhanced content" }
 
-## Learn More
+🔹 /api/generate-template
+Method: POST
 
-To learn more about Next.js, take a look at the following resources:
+Body: { "content": "text", "contentType": "Instagram Post" }
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Response: { "template": "Generated template text" }
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
